@@ -38,7 +38,8 @@ fun CityItem(
     ) {
         Row(
             modifier = Modifier
-                .padding(start = 2.dp, end = 2.dp),
+                .padding(start = 2.dp, end = 2.dp)
+                .background(Gray),
             verticalAlignment = Alignment.CenterVertically
         ) {
             Text(
