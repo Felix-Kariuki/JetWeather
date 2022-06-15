@@ -19,7 +19,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.flexcode.haliyaanga"
+        applicationId "com.flexcode.jetweather"
         minSdk 21
         targetSdk 32
         versionCode 1
