@@ -26,7 +26,7 @@ A weather app built using Jetpack compose
 ## Screenshhots
 * Ui Inspiration [dribble](https://dribbble.com/search/weather-app)
 
-<img src="/screenshots/home.png" width="320">&emsp;
+<img src="/screenshots/hme.png" width="320">&emsp;
 
 
 ## Demo
