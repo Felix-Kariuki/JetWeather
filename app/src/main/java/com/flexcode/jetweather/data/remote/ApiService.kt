@@ -10,7 +10,7 @@ interface ApiService {
     @GET("forecast.json")
     suspend fun getWeather(
         @Query("q") query : String,
-        @Query("key") key : String = "ENTER_API_KEY",
+        @Query("key") key : String = "",
         @Query("days") days : Int = 3,
         @Query("aqi") aqi : String = "no",
         @Query("alerts") alerts : String = "no",
