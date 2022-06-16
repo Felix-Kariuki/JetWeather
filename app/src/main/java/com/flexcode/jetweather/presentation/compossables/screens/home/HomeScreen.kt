@@ -48,11 +48,12 @@ import com.ramcosta.composedestinations.annotation.Destination
 fun HomeScreen(
     viewModel: HomeViewModel = hiltViewModel()
 ) {
+    val state = viewModel.state.value
+
     val context = LocalContext.current
     val locationDialog = remember { mutableStateOf(false) }
     val localLocations : List<Locations> = viewModel.allLocations.observeAsState().value ?: emptyList()
 
-    val state = viewModel.state.value
 
     /**
      * Remember to implement on long click to delete a city
@@ -115,14 +116,14 @@ fun HomeScreen(
                                     .height(30.dp)
                                     .clickable {
                                         viewModel.saveToSharedPrefs(location.locationName)
-
                                         Toast
                                             .makeText(
                                                 context, "${location.locationName} set as Default",
                                                 Toast.LENGTH_LONG
                                             )
                                             .show()
-                                    },
+                                    }
+                                    ,
                                 backgroundColor = if (location.locationName == viewModel.currentLocation.value){
                                     Blue
                                 }else Gray,

@@ -5,7 +5,5 @@ import com.flexcode.jetweather.domain.model.Locations
 
 data class HomeState(
     val isLoading : Boolean = false,
-    val isLaunch: Boolean = false,
-    val cities: List<Locations> = emptyList(),
     val data: WeatherResponse? = null
 )
