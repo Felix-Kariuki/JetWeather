@@ -34,6 +34,7 @@ import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import com.flexcode.jetweather.data.models.Forecastday
 import com.flexcode.jetweather.domain.model.Locations
+import com.flexcode.jetweather.presentation.compossables.screens.home.components.CityItem
 import com.flexcode.jetweather.presentation.compossables.screens.home.components.DailyItem
 import com.flexcode.jetweather.ui.theme.Blue
 import com.flexcode.jetweather.ui.theme.DarkBackground
@@ -94,7 +95,7 @@ fun HomeScreen(
                     contentPadding = PaddingValues(end = 8.dp),
                     content = {
                         items(localLocations) { location ->
-                            /*CityItem(
+                            CityItem(
                                 modifier = Modifier.clickable {
                                     viewModel.saveToSharedPrefs(location.locationName)
 
@@ -109,40 +110,10 @@ fun HomeScreen(
                                     Gray
                                 }else DarkBackground,
                                 location = location.locationName,
-                            )*/
-                            Card(
-                                modifier = Modifier
-                                    .padding(start = 4.dp)
-                                    .height(30.dp)
-                                    .clickable {
-                                        viewModel.saveToSharedPrefs(location.locationName)
-                                        Toast
-                                            .makeText(
-                                                context, "${location.locationName} set as Default",
-                                                Toast.LENGTH_LONG
-                                            )
-                                            .show()
-                                    }
-                                    ,
-                                backgroundColor = if (location.locationName == viewModel.currentLocation.value){
-                                    Blue
-                                }else Gray,
-                                elevation = 5.dp,
-                                shape = RoundedCornerShape(8.dp)
-                            ) {
-                                Row(
-                                    modifier = Modifier
-                                        .padding(start = 8.dp, end = 8.dp),
-                                    verticalAlignment = Alignment.CenterVertically
-                                ) {
-                                    Text(
-                                        text = location.locationName,
-                                        color = Color.White
-                                    )
-
+                                onLongClick = {
+                                    //TODO()
                                 }
-
-                            }
+                            )
 
                         }
                     }

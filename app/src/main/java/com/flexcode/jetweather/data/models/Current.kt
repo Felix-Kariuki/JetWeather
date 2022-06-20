@@ -13,7 +13,7 @@ data class Current(
     @SerializedName("temp_f")
     var tempF: Double? = null,
     @SerializedName("is_day")
-    var isDay: Int? = null,
+    var isDay: Double? = null,
     @SerializedName("condition")
     var condition: Condition? = Condition(),
     @SerializedName("wind_mph")
@@ -21,31 +21,31 @@ data class Current(
     @SerializedName("wind_kph")
     var windKph: Double? = null,
     @SerializedName("wind_degree")
-    var windDegree: Int? = null,
+    var windDegree: Double? = null,
     @SerializedName("wind_dir")
     var windDir: String? = null,
     @SerializedName("pressure_mb")
-    var pressureMb: Int? = null,
+    var pressureMb: Double? = null,
     @SerializedName("pressure_in")
     var pressureIn: Double? = null,
     @SerializedName("precip_mm")
-    var precipMm: Int? = null,
+    var precipMm: Double?=null,
     @SerializedName("precip_in")
-    var precipIn: Int? = null,
+    var precipIn: Double? = null,
     @SerializedName("humidity")
-    var humidity: Int? = null,
+    var humidity: Double? = null,
     @SerializedName("cloud")
-    var cloud: Int? = null,
+    var cloud: Double? = null,
     @SerializedName("feelslike_c")
     var feelslikeC: Double? = null,
     @SerializedName("feelslike_f")
     var feelslikeF: Double? = null,
     @SerializedName("vis_km")
-    var visKm: Int? = null,
+    var visKm: Double? = null,
     @SerializedName("vis_miles")
-    var visMiles: Int? = null,
+    var visMiles: Double? = null,
     @SerializedName("uv")
-    var uv: Int? = null,
+    var uv: Double? = null,
     @SerializedName("gust_mph")
     var gustMph: Double? = null,
     @SerializedName("gust_kph")

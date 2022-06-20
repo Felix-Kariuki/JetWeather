@@ -78,6 +78,12 @@ class HomeViewModel @Inject constructor(
         _locationDialogValue.value = text
     }
 
+    fun deleteLocation() {
+        viewModelScope.launch {
+
+        }
+    }
+
     fun addLocation() {
         viewModelScope.launch {
             if (locationDialogValue.value.isNotBlank()) {

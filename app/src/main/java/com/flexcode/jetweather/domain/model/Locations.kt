@@ -1,6 +1,5 @@
 package com.flexcode.jetweather.domain.model
 
-import androidx.room.PrimaryKey
 
 data class Locations(
 

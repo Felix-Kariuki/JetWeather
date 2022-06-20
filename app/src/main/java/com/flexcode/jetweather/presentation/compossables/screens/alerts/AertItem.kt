@@ -1,4 +1,4 @@
-package com.flexcode.jetweather.presentation.compossables.screens
+package com.flexcode.jetweather.presentation.compossables.screens.alerts
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding

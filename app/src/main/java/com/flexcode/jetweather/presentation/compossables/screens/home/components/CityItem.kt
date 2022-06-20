@@ -30,6 +30,7 @@ fun CityItem(
     modifier: Modifier,
     backgroundColor: Color,
     location: String,
+    onLongClick: () -> Unit = {}
 ) {
 
     Card(
