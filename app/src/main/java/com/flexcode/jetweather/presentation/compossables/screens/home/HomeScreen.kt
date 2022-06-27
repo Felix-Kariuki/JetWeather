@@ -41,6 +41,9 @@ import com.flexcode.jetweather.ui.theme.Gray
 import com.flexcode.jetweather.utils.dayOfTheWeek
 import com.hitanshudhawan.circularprogressbar.CircularProgressBar
 import com.ramcosta.composedestinations.annotation.Destination
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 
 @Destination(start = true)
@@ -57,7 +60,7 @@ fun HomeScreen(
 
 
     /**
-     * Remember to implement  click to delete a city
+     * Remember to implement   delete a city
      */
 
     if (state.isLoading) {
@@ -136,13 +139,28 @@ fun HomeScreen(
                             Row(
                                 modifier = Modifier
                                     .padding(start = 8.dp, end = 8.dp),
-                                verticalAlignment = Alignment.CenterVertically
+                                verticalAlignment = Alignment.CenterVertically,
+                                horizontalArrangement = Arrangement.SpaceBetween
                             ) {
                                 Text(
                                     text = location.locationName,
                                     color = Color.White
                                 )
+                                IconButton(onClick = {
+                                    GlobalScope.launch(Dispatchers.Main) {
+                                        viewModel.deleteLocation(Locations(locationName = location.locationName))
+                                    }
+                                    Toast.makeText(context,"${location.locationName} Deleted..",
+                                        Toast.LENGTH_LONG).show()
+                                }) {
 
+                                    Icon(
+
+                                        imageVector = Icons.Default.Clear,
+                                        tint = Color.White,
+                                        contentDescription = null
+                                    )
+                                }
                             }
                         }
 

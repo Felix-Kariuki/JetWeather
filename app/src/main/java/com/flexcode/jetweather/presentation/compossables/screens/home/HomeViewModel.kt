@@ -78,10 +78,8 @@ class HomeViewModel @Inject constructor(
         _locationDialogValue.value = text
     }
 
-    fun deleteLocation() {
-        viewModelScope.launch {
-
-        }
+    suspend fun deleteLocation(location: Locations) {
+        repository.deleteLocation(location)
     }
 
     fun addLocation() {
