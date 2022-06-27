@@ -50,7 +50,6 @@ Do Reach Out :
 
   * [LinkedIn](https://www.linkedin.com/in/felix-kariuki/)
   
-  * [Email](felixmurimi280@gmail.com)
 
 
 ## License and Copyright
