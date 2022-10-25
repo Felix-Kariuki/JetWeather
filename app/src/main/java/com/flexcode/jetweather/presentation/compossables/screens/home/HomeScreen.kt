@@ -98,25 +98,7 @@ fun HomeScreen(
                 contentPadding = PaddingValues(end = 8.dp),
                 content = {
                     items(localLocations) { location ->
-                        /*CityItem(
-                            modifier = Modifier.clickable {
-                                viewModel.saveToSharedPrefs(location.locationName)
 
-                                Toast
-                                    .makeText(
-                                        context, "${location.locationName} set as Default",
-                                        Toast.LENGTH_LONG
-                                    )
-                                    .show()
-                            },
-                            backgroundColor = if (location.locationName == viewModel.currentLocation.value){
-                                Gray
-                            }else DarkBackground,
-                            location = location.locationName,
-                            onLongClick = {
-                                //TODO()
-                            }
-                        )*/
                         Card(
                             modifier = Modifier
                                 .padding(start = 4.dp)
