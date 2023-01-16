@@ -2,7 +2,7 @@
 A weather app built using Jetpack compose
 
 ## Architecture
-This app follows the mvvm- architecture which guides apps development to three layers: 
+This app follows the mvvm - architecture which guides apps development to three layers: 
 
  ### 1.UI layer
 The role of the UI layer (or presentation layer) is to display the application data on the screen. Whenever the data changes, either due to user interaction (such as pressing a button) or external input (such as a network response), the UI should update to reflect the changes.
@@ -48,8 +48,6 @@ The domain layer is responsible for encapsulating complex business logic, or sim
 
 <img src="/screenshots/home.png" width="320">&emsp;
 
-
-## Demo
 
 ## Getting Started
 To use this project [clone](https://github.com/Felix-Kariuki/JetWeather) it to your machine and: 
